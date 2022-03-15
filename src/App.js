@@ -25,12 +25,16 @@ export default function App() {
   // function changehandler1(e){
   //   setpassword(e.target.value)
   // }
+  const onsubmit = (e) => {
+    e.preventDefault();
+  };
+
   function detail() {
     console.log(formData);
   }
   return (
     <div className="App">
-      <form>
+      <form onSubmit={onsubmit}>
         <input
           type="text"
           placeholder="Name"
